@@ -24,7 +24,7 @@ const Sidebar = () => {
       {/* FOOTER */}
       <div>
         <p className="text-center text-xs text-gray-500">
-          &copy; 2024 MateenDiv{" "}
+          &copy; 2025 MateenDiv{" "}
         </p>
       </div>
     </div>
