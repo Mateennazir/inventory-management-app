@@ -13,6 +13,7 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
   };
+
   const SidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
   } bg-white transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
@@ -20,7 +21,11 @@ const Sidebar = () => {
   return (
     <div className={SidebarClassNames}>
       {/* TOP LOGO */}
-      <div className="flex gap-3 justify-between md:justify-normal items-center pt-8">
+      <div
+        className={`flex gap-3 justify-between md:justify-normal items-center pt-8  ${
+          isSidebarCollapsed ? "px-5" : "px-8"
+        }`}
+      >
         <div>logo</div>
         <h1 className="font-extrabold text-2xl">MateenDiv</h1>
 
