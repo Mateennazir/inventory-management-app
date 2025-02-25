@@ -124,7 +124,7 @@ const Sidebar = () => {
         <SidebarLink
           href="/settings"
           icon={SlidersHorizontal}
-          label="inventory"
+          label="Settings"
           isCollapsed={isSidebarCollapsed}
         />
         <SidebarLink
@@ -136,7 +136,7 @@ const Sidebar = () => {
       </div>
 
       {/* FOOTER */}
-      <div>
+      <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
         <p className="text-center text-xs text-gray-500">
           &copy; 2025 MateenDiv{" "}
         </p>
