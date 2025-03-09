@@ -27,6 +27,10 @@ app.use(cors());
 // app.use("/users", userRoutes); // http://localhost:8000/users
 // app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
 
+app.get("/hello", (req, res) => {
+  res.send("hello world");
+});
+
 /* SERVER */
 const port = Number(process.env.PORT) || 3001;
 app.listen(port, () => {
