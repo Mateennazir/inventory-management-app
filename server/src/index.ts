@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
+
 /* ROUTE IMPORTS */
 import dashboardRoutes from "./routes/dashboardRoutes";
 // import productRoutes from "./routes/productRoutes";
@@ -23,12 +24,16 @@ app.use(cors());
 
 /* ROUTES */
 app.use("/dashboard", dashboardRoutes); // http://localhost:8000/dashboard
+
 // app.use("/products", productRoutes); // http://localhost:8000/products
+
 // app.use("/users", userRoutes); // http://localhost:8000/users
+
 // app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
 
 /* SERVER */
+
 const port = Number(process.env.PORT) || 3001;
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`);
 });
